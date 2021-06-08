@@ -58,6 +58,18 @@ function newNumber() {
     try {
         let writtenNumber = koreanNumberSystem ? getNumberWrittenKorean(randomNumber) : getNumberWrittenChinese(randomNumber);
         showWritten ? setDisplays(writtenNumber, randomNumber) : setDisplays(randomNumber, writtenNumber);
+
+        const inputField = document.querySelector('#inputField');
+        inputField.addEventListener('change', onChange);
+        function onChange(e) {
+            console.log(getHiddenDisplay().innerHTML);
+
+            if (getHiddenDisplay().innerHTML && e.target.value.trim() === getHiddenDisplay().innerHTML.trim()) {
+                console.log(getHiddenDisplay().innerHTML);
+                newNumber();
+            }
+        }
+
     } catch (e) {
         setDisplays(e.message, "");
     }
