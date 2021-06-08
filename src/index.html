@@ -1,66 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>Korean Trainer</title>
     <script src="trainer.js"></script>
-    <link rel="stylesheet" type="text/css" href="style.css" media="screen"/>
+    <link rel="stylesheet" type="text/css" href="style.css" media="screen" />
 </head>
+
 <body>
-<div id="app">
-    <h1>Korean Trainer</h1>
-    <div id="content">
-        <div id="displays">
-            <div id="visibleDisplay" class="display"><span>Click a button</span></div>
-            <div id="hiddenDisplay" class="display" onclick="showAnswer()"><span> to start...</span></div>
-        </div>
-        <div id="controls">
-            <div id="numberControls">
-                <button onclick="newNumber()">Number</button>
-                <div id="numberControlsOptions">
-                    <div id="numberFrom" class="numberinputs">
-                        <label for="numberFromInput">Min:</label>
-                        <input type="number" id="numberFromInput" min="1" placeholder="1">
-                    </div>
-                    <div id="numberTo" class="numberinputs">
-                        <label for="numberToInput">Max:</label>
-                        <input type="number" id="numberToInput" placeholder="9999999999999999999">
-                    </div>
-                    <div id="radioGroups">
-                        <div id = "numberSystemChoices">
-                            <label><input type="radio" id="chineseNumber" name="selectNumberSystem" checked>Chinese
-                                System</label>
-                            <label><input type="radio" id="koreanNumber" name="selectNumberSystem">Korean System</label>
+    <div id="app">
+        <h1>Korean Trainer</h1>
+        <div id="content">
+            <div id="displays">
+                <div class="display"><input type="text" id="inputField" name="inputField"></div>
+                <div id="visibleDisplay" class="display"><span>Click a button</span></div>
+                <div id="hiddenDisplay" class="display" onclick="showAnswer()"><span> to start...</span></div>
+            </div>
+            <div id="controls">
+                <div id="numberControls">
+                    <button onclick="newNumber()">Number</button>
+                    <div id="numberControlsOptions">
+                        <div id="numberFrom" class="numberinputs">
+                            <label for="numberFromInput">Min:</label>
+                            <input type="number" id="numberFromInput" min="1" placeholder="1">
                         </div>
+                        <div id="numberTo" class="numberinputs">
+                            <label for="numberToInput">Max:</label>
+                            <input type="number" id="numberToInput" placeholder="9999999999999999999">
+                        </div>
+                        <div id="radioGroups">
+                            <div id="numberSystemChoices">
+                                <label><input type="radio" id="chineseNumber" name="selectNumberSystem" checked>Chinese
+                                    System</label>
+                                <label><input type="radio" id="koreanNumber" name="selectNumberSystem">Korean
+                                    System</label>
+                            </div>
 
-                        <label><input type="radio" id="showDigits" name="selectNumberDirection"
-                                      checked>Show Digits</label>
-                        <label><input type="radio" id="showWritten" name="selectNumberDirection">Show Written</label>
+                            <label><input type="radio" id="showDigits" name="selectNumberDirection" checked>Show
+                                Digits</label>
+                            <label><input type="radio" id="showWritten" name="selectNumberDirection">Show
+                                Written</label>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div id="timeControls">
-                <button onclick="newTime()">Time</button>
-                <div id="timeControlOptions">
-                    <label><input type="radio" id="showTimeDigits" name="selectTimeDirection" checked>Show Digits</label>
-                    <label><input type="radio" id="showTimeWritten" name="selectTimeDirection"
-                                  >Show Written</label>
+                <div id="timeControls">
+                    <button onclick="newTime()">Time</button>
+                    <div id="timeControlOptions">
+                        <label><input type="radio" id="showTimeDigits" name="selectTimeDirection" checked>Show
+                            Digits</label>
+                        <label><input type="radio" id="showTimeWritten" name="selectTimeDirection">Show Written</label>
+                    </div>
                 </div>
-            </div>
 
-            <div id="weekdayControls">
-                <button onclick="newWeekDay()">Weekday</button>
-                <div id="weekdayControlsOptions">
-                    <label><input type="radio" id="showWeekdayKorean" name="selectWeekdayDirection"
-                                  checked>Show Korean</label>
-                    <label><input type="radio" id="showWeekdayEnglish" name="selectWeekdayDirection">Show
-                        English</label>
+                <div id="weekdayControls">
+                    <button onclick="newWeekDay()">Weekday</button>
+                    <div id="weekdayControlsOptions">
+                        <label><input type="radio" id="showWeekdayKorean" name="selectWeekdayDirection" checked>Show
+                            Korean</label>
+                        <label><input type="radio" id="showWeekdayEnglish" name="selectWeekdayDirection">Show
+                            English</label>
+                    </div>
                 </div>
+
+
             </div>
-
-
         </div>
     </div>
-</div>
 </body>
+
 </html>
